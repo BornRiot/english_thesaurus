@@ -1,0 +1,2 @@
+Write a function that takes a key value and returns the output for that key.
+Incorporate the loading of a json file 
