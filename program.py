@@ -21,6 +21,14 @@ def translate(word):
     word = word.lower()
     if word in data:  # dealing with non-existing words in data
         return data[word]
+    # Implementationof my solution to resolve definition problems for Delhi
+    # and Paris
+    elif word == "paris":
+        word = "Paris"
+        return data[word]
+    elif word == "delhi":
+        word = "Delhi"
+        return data[word]
     elif len(get_close_matches(word, data.keys())) > 0:
         yn = input("Did you mean %s instead. Enter Y if yes, N if No: " % get_close_matches(word, data.keys())[0])
         if yn == "Y":
